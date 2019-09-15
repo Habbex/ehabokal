@@ -4,3 +4,9 @@ tasks:
   - init: yarn install
     command: yarn develop
     openIn: bottom
+vscode:
+  extensions:
+    - donjayamanne.githistory@0.4.6:roDZW3cK0MQ3dyhssMrtcg==
+    - ecmel.vscode-html-css@0.2.3:RBTpzQbz8rn5KTlc82tnsQ==
+    - esbenp.prettier-vscode@2.2.2:KF7uv+/v78QclIpOv6wh6g==
+    - ionutvmi.path-autocomplete@1.13.3:XzX3IFyeQJx3JGiFjNXD2g==
