@@ -1,4 +1,5 @@
 module.exports = {
+    pathPrefix: '/ehabokal',
   siteMetadata: {
     title: `Ehabs Portfolio`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
