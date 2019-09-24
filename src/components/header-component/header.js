@@ -18,11 +18,10 @@ const Header = () => {
     `)
   return (
     <header className={headerStyles.header}>
-
-      <h1>
-       <div style={{ maxWidth: `50px`, marginBottom: `1.45rem` }}>
+    <div style={{ maxWidth: `50px`, marginBottom: `1.45rem` }}>
     <Img fluid={data.headerImg.childImageSharp.fluid}/>
     </div>
+      <h1>
         <Link className={headerStyles.title} to="/">Ehab Portfolio </Link>
       </h1>
       <nav>
