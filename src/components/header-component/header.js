@@ -18,25 +18,30 @@ const Header = () => {
     `)
   return (
     <header className={headerStyles.header}>
-    <div style={{ maxWidth: `50px`, marginBottom: `1.45rem` }}>
-    <Img fluid={data.headerImg.childImageSharp.fluid}/>
-    </div>
-      <h1>
-        <Link className={headerStyles.title} to="/">Ehab Portfolio </Link>
+    <div className={headerStyles.inner}>
+        <Link to="/">
+         <Img className={headerStyles.imageAvatar} fluid={data.headerImg.childImageSharp.fluid}/>
+         </Link>
+      <h1><strong>I am Strata</strong>, a super simple<br />
+					responsive site template freebie<br />
+					crafted by <a href="http://html5up.net">HTML5 UP</a>.
       </h1>
       <nav>
         <ul className={headerStyles.navList}>
           <li>
+           <h1>
             <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/blog">Blog</Link>
+           </h1>
           </li>
-          <li>
+          {/* <li>
             <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/about">about</Link>
           </li>
           <li>
             <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/contact">Contact</Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
+      </div>
     </header>
   )
 }
