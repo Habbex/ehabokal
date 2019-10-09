@@ -8,6 +8,122 @@
 //     text-decoration: none;
 // }
 
+@import "../../libs/_vendor";
+@import "../../libs/_vars";
+@import "../../libs/_mixinis";
+@import "../../libs/_functions";
+$size-header-width: 35%;
+$size-header-pad: 4em;
+.header {
+  @include vendor("display", "flex");
+  @include vendor("flex-direction", "column");
+  @include vendor("align-items", "flex-end");
+  @include vendor("justify-content", "space-between");
+  background-color: _palette(accent2, bg);
+  background-attachment: scroll, scroll;
+  background-image: url("../../images/header/headerBackgroundImage2.jpg");
+  background-position: top, left;
+  background-repeat: repeat, no-repeat;
+  background-size: auto 90%;
+  color: _palette(accent2, fg);
+  height: 100%;
+  left: 0;
+  padding: ($size-header-pad * 2) $size-header-pad;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: $size-header-width;
+  //Global
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+
+  > * {
+    @include vendor("flex-shrink", "0");
+    width: 100%;
+  }
+
+  > .inner {
+    @include vendor("flex-grow", "1");
+    margin: 0 0 ($size-header-pad * 0.5) 0;
+  }
+
+  strong,
+  b {
+    color: _palette(accent2, fg-bold);
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: _palette(accent2, fg-bold);
+  }
+
+  h1 {
+    color: _palette(accent2, fg);
+    font-size: 1.35em;
+    line-height: 1.75em;
+    margin: 0;
+  }
+
+  .image-avatar {
+    margin: 0 0 (_size(element-margin) * 0.5) 0;
+    width: 6.25em;
+    box-sizing: inherit;
+    text-align: center;
+    border: 0;
+    display: inline-block;
+    position: relative;
+  }
+
+  /*Nav-List*/
+
+  ul {
+    list-style-type: none;
+    margin: 0 0 _size(element-margin) 0;
+    padding-left: 1em;
+    display: flex;
+
+    li {
+      padding-left: 0.5em;
+    }
+    a {
+      color: _palette(accent2, fg-bold);
+      font-size: 1.35em;
+      line-height: 1.75em;
+      margin-right: 1.3rem;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: _palette(accent2, fg-light);
+    }
+
+    .active-nav-item {
+      color: _palette(accent2, fg);
+      text-decoration: underline;
+    }
+
+    &.alt {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        border-top: solid 2px _palette(border);
+        padding: 0.5em 0;
+
+        &:first-child {
+          border-top: 0;
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}
 // .nav-list{
 //     display: flex;
 //     list-style-type: none;
@@ -24,68 +140,3 @@
 // .nav-item:hover{
 //     color: #666666;
 // }
-// .active-nav-item{
-//     color:#333333;
-// }
-@import '../../libs/_vendor';
-@import '../../libs/_vars';
-@import '../../libs/_mixinis';
-@import '../../libs/_functions';
-$size-header-width: 35%;
-$size-header-pad: 4em;
-	.header {
-		@include vendor('display', 'flex');
-		@include vendor('flex-direction', 'column');
-		@include vendor('align-items', 'flex-end');
-		@include vendor('justify-content', 'space-between');
-		background-color:		_palette(accent2, bg);
-		background-attachment:	scroll,								scroll;
-		// background-image:		url('images/overlay.png'),			url('../../images/bg.jpg');
-		background-position:	top left,							top left;
-		background-repeat:		repeat,								no-repeat;
-		background-size:		auto,								150%;
-		color: _palette(accent2, fg);
-		height: 100%;
-		left: 0;
-		padding: ($size-header-pad * 2) $size-header-pad;
-		position: fixed;
-		text-align: right;
-		top: 0;
-		width: $size-header-width;
-        //Global
-        margin: 0;
-		border: 0;
-		font-size: 100%;
-		font: inherit;
-		vertical-align: baseline;
-
-		> * {
-			@include vendor('flex-shrink', '0');
-			width: 100%;
-		}
-
-		> .inner {
-			@include vendor('flex-grow', '1');
-			margin: 0 0 ($size-header-pad * 0.5) 0;
-		}
-
-		strong, b {
-			color: _palette(accent2, fg-bold);
-		}
-
-		h2, h3, h4, h5, h6 {
-			color: _palette(accent2, fg-bold);
-		}
-
-		h1 {
-			color: _palette(accent2, fg);
-			font-size: 1.35em;
-			line-height: 1.75em;
-			margin: 0;
-		}
-
-		.image-avatar {
-			margin: 0 0 (_size(element-margin) * 0.5) 0;
-			width: 6.25em;
-		}
-	}
