@@ -12,7 +12,7 @@
 @import "../../libs/_vars";
 @import "../../libs/_mixinis";
 @import "../../libs/_functions";
-$size-header-width: 35%;
+$size-header-width: 20%;
 $size-header-pad: 4em;
 .header {
   @include vendor("display", "flex");
@@ -85,8 +85,8 @@ $size-header-pad: 4em;
   ul {
     list-style-type: none;
     margin: 0 0 _size(element-margin) 0;
-    padding-left: 1em;
-    display: flex;
+    padding-left: unset;
+    display: inline-flex;
 
     li {
       padding-left: 0.5em;
