@@ -1,42 +1,70 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import headerStyles from './header.module.scss'
-import {useStaticQuery, graphql} from "gatsby"
+import headerStyles from "./header.module.scss"
+import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 const Header = () => {
-    const data= useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
-      headerImg: file(relativePath: { eq: "gatsby-icon.png" }) {
+      headerImg: file(relativePath: { eq: "header/headerBackgroundImage2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 50) {
+          fluid(maxWidth: 2938, maxHeight: 3937) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+    }
+      profileImg: file(relativePath: { eq: "header/profilePic.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
       }
     }
-    `)
+  `)
   return (
     <header className={headerStyles.header}>
-    <div style={{ maxWidth: `50px`, marginBottom: `1.45rem` }}>
-    <Img fluid={data.headerImg.childImageSharp.fluid}/>
-    </div>
-      <h1>
-        <Link className={headerStyles.title} to="/">Ehab Portfolio </Link>
-      </h1>
-      <nav>
-        <ul className={headerStyles.navList}>
-          <li>
-            <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/about">about</Link>
-          </li>
-          <li>
-            <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
+     <Img style={{position: "absolute",left: 0,top: 0,width: "100%",height: "100%"}} fluid={data.headerImg.childImageSharp.fluid}/>
+      <div className={headerStyles.inner}>
+        <Link  to="/">
+          <Img  className={headerStyles.imageAvatar} fluid={data.profileImg.childImageSharp.fluid}/>
+        </Link>
+        <h1>
+          <strong>I am Strata</strong>, a super simple
+          <br />
+          responsive site template freebie
+          <br />
+          crafted by <a href="http://html5up.net">HTML5 UP</a>.
+        </h1>
+        <nav>
+          <ul>
+            <li>
+              <Link activeClassName={headerStyles.activeNavItem} to="/blog">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={headerStyles.navItem}
+                activeClassName={headerStyles.activeNavItem}
+                to="/about"
+              >
+                About me
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={headerStyles.navItem}
+                activeClassName={headerStyles.activeNavItem}
+                to="/contact"
+              >
+                Contact me
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   )
 }
