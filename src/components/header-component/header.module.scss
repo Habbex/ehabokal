@@ -12,7 +12,7 @@
 @import "../../libs/_vars";
 @import "../../libs/_mixinis";
 @import "../../libs/_functions";
-$size-header-width: 20%;
+$size-header-width: 25%;
 $size-header-pad: 4em;
 .header {
   @include vendor("display", "flex");
@@ -91,7 +91,7 @@ $size-header-pad: 4em;
     display: inline-flex;
 
     li {
-      padding-left: 0.5em;
+      padding-left: 1.35em;
     }
     a {
       color: _palette(accent2, fg-bold);
@@ -103,6 +103,19 @@ $size-header-pad: 4em;
 
     a:hover {
       color: _palette(accent2, fg-light);
+    }
+
+    a::after{
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: _palette(accent2, fg-light);
+        transition: width .3s;
+    }
+    a:hover::after{
+        height: 2px;
+        width: 100%;
     }
 
     .active-nav-item {
