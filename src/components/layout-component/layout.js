@@ -6,15 +6,15 @@
  */
 
 import React from "react"
-// import PropTypes from "prop-types"
-// import { useStaticQuery, graphql } from "gatsby"
+import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../header-component/header"
 import LayoutStyles from './layout.module.scss'
 
 const Layout = (props) => {
     return (
-        <div className={LayoutStyles.container}>
+        <div className={LayoutStyles.layout}>
             <div className={LayoutStyles.content}>
                 <Header />
                 {props.children}
