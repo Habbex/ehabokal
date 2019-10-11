@@ -20,11 +20,11 @@ $size-header-pad: 4em;
   @include vendor("align-items", "flex-end");
   @include vendor("justify-content", "space-between");
   background-color: _palette(accent2, bg);
-  background-attachment: scroll, scroll;
-  background-image: url("../../images/header/headerBackgroundImage2.jpg");
-  background-position: top, left;
-  background-repeat: repeat, no-repeat;
-  background-size: auto 90%;
+//   background-attachment: scroll, scroll;
+//   background-image: url("../../images/header/headerBackgroundImage2.jpg");
+//   background-position: top, left,top ,left;
+//   background-repeat: no-repeat, repeat;
+//   background-size: auto 90%;
   color: _palette(accent2, fg);
   height: 100%;
   left: 0;
@@ -48,6 +48,7 @@ $size-header-pad: 4em;
   > .inner {
     @include vendor("flex-grow", "1");
     margin: 0 0 ($size-header-pad * 0.5) 0;
+    z-index: 2;
   }
 
   strong,
@@ -75,9 +76,10 @@ $size-header-pad: 4em;
     width: 6.25em;
     box-sizing: inherit;
     text-align: center;
-    border: 0;
+    border: 2px solid _palette(accent2, fg);
     display: inline-block;
     position: relative;
+    border-radius: 100%;
   }
 
   /*Nav-List*/
