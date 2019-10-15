@@ -4,86 +4,57 @@
 @import "../../libs/_functions";
 @import "../../libs/_html-grid";
 @import "../../libs/_breakpoints";
-$size-header-width: 25%;
+
+$size-header-width: 35%;
 $size-header-pad: 4em;
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: _palette(bg);
+
+  // Stops initial animations until page loads.
+  &.is-preload {
+    *,
+    *:before,
+    *:after {
+      @include vendor("animation", "none !important");
+      @include vendor("transition", "none !important");
+    }
+  }
+}
+.main {
+  margin-left: $size-header-width;
+  max-width: 50em + $size-header-pad;
+  padding: ($size-header-pad * 2) $size-header-pad $size-header-pad
+    $size-header-pad;
+  width: calc(100% - #{$size-header-width});
+
+  > section {
+    border-top: solid 2px _palette(border);
+    margin: $size-header-pad 0 0 0;
+    padding: $size-header-pad 0 0 0;
+
+    &:first-child {
+      border-top: 0;
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+}
 
 
-.layout{
-// Breakpoints.
-    @include breakpoints((
-		xlarge:  ( 1281px,  1800px ),
-		large:   ( 981px,   1280px ),
-		medium:  ( 737px,   980px  ),
-		small:   ( 481px,   736px  ),
-		xsmall:  ( null,    480px  ),
-	));
-
-// Reset.
-html, body, div, span, applet, object,
-	iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-	pre, a, abbr, acronym, address, big, cite,
-	code, del, dfn, em, img, ins, kbd, q, s, samp,
-	small, strike, strong, sub, sup, tt, var, b,
-	u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-	form, label, legend, table, caption, tbody,
-	tfoot, thead, tr, th, td, article, aside,
-	canvas, details, embed, figure, figcaption,
-	footer, hgroup, menu, nav, output, ruby,
-	section, summary, time, mark, audio, video {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		font-size: 100%;
-		font: inherit;
-		vertical-align: baseline;
-	}
-
-    article, aside, details, figcaption, figure,
-	footer, hgroup, menu, nav, section {
-		display: block;
-	}
-
-	body {
-		line-height: 1;
-	}
-
-	ol, ul {
-		list-style:none;
-	}
-
- 	blockquote,	q {
-		quotes: none;
-
-		&:before,
-		&:after {
-			content: '';
-			content: none;
-		}
-	}
-
-	table {
-		border-collapse: collapse;
-		border-spacing: 0;
-	}
-
-	body {
-		-webkit-text-size-adjust: none;
-	}
-
-	mark {
-		background-color: transparent;
-		color: inherit;
-	}
-
-	input::-moz-focus-inner {
-		border: 0;
-		padding: 0;
-	}
-
-	input, select, textarea {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-	}
+.header {
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }

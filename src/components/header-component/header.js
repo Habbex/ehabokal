@@ -24,7 +24,7 @@ const Header = () => {
     }
   `)
   return (
-    <header className={headerStyles.header}>
+    <div className={headerStyles.header}>
      <Img style={{position: "absolute",left: 0,top: 0,width: "100%",height: "100%"}} fluid={data.headerImg.childImageSharp.fluid}/>
       <div className={headerStyles.inner}>
         <Link  to="/">
@@ -65,7 +65,7 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-    </header>
+    </div>
   )
 }
 export default Header
