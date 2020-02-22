@@ -8,23 +8,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import BodyClassName from 'react-body-classname';
+import BodyClassName from "react-body-classname"
 
 import Header from "../header-component/header"
 import Section from "../section-component/section"
-import LayoutStyles from './layout.module.scss'
+import LayoutStyles from "./layout.module.scss"
 
-const Layout = (props) => {
-    return (
-        <BodyClassName className={LayoutStyles.isPreload}>
-        <div>
-            <header className={LayoutStyles.header}>
-                <Header />
-                </header>
-                <div className={LayoutStyles.main}>
-                 {props.children}
-                </div>
-                </div>
+const Layout = props => {
+  return (
+    <BodyClassName className={LayoutStyles.isPreload}>
+      <div>
+        <header className={LayoutStyles.header}>
+          <Header />
+        </header>
+        <div className={LayoutStyles.main}>{props.children}</div>
+      </div>
     </BodyClassName>
   )
 }

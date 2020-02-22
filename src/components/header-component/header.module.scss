@@ -3,7 +3,7 @@
 @import "../../libs/_vars";
 @import "../../libs/_mixinis";
 @import "../../libs/_functions";
-$size-header-width: 25%;
+$size-header-width: 35%;
 $size-header-pad: 4em;
 
 
@@ -102,7 +102,6 @@ $size-header-pad: 4em;
 
     .active-nav-item {
       color: _palette(accent2, fg);
-      text-decoration: underline;
     }
 
     &.alt {
