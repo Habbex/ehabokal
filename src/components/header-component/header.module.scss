@@ -1,11 +1,9 @@
-
 @import "../../libs/_vendor";
 @import "../../libs/_vars";
 @import "../../libs/_mixinis";
 @import "../../libs/_functions";
 $size-header-width: 35%;
 $size-header-pad: 4em;
-
 
 .header {
   @include vendor("display", "flex");
@@ -87,17 +85,17 @@ $size-header-pad: 4em;
       color: _palette(accent2, fg-light);
     }
 
-    a::after{
-        content: '';
-        display: block;
-        width: 0;
-        height: 2px;
-        background: _palette(accent2, fg-light);
-        transition: width .3s;
+    a::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: _palette(accent2, fg-light);
+      transition: width 0.3s;
     }
-    a:hover::after{
-        height: 2px;
-        width: 100%;
+    a:hover::after {
+      height: 2px;
+      width: 100%;
     }
 
     .active-nav-item {
