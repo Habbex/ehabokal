@@ -7,6 +7,184 @@
 
 $size-header-width: 35%;
 $size-header-pad: 4em;
+// Breakpoints.
+
+@include breakpoints(
+  (
+    xlarge: (
+      1281px,
+      1800px,
+    ),
+    large: (
+      981px,
+      1280px,
+    ),
+    medium: (
+      737px,
+      980px,
+    ),
+    small: (
+      481px,
+      736px,
+    ),
+    xsmall: (
+      null,
+      480px,
+    ),
+  )
+);
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+mark {
+  background-color: transparent;
+  color: inherit;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input,
+select,
+textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -31,148 +209,163 @@ body {
   }
 }
 
-	body, input, select, textarea {
-		color: _palette(fg);
-		font-family: _font(family);
-		font-size: 16pt;
-		font-weight: _font(weight);
-		line-height: 1.75em;
-	}
+body,
+input,
+select,
+textarea {
+  color: _palette(fg);
+  font-family: _font(family);
+  font-size: 16pt;
+  font-weight: _font(weight);
+  line-height: 1.75em;
+}
 
-	a {
-		@include vendor('transition', ('color #{_duration(transition)} ease-in-out', 'border-color #{_duration(transition)} ease-in-out'));
-		border-bottom: dotted 1px;
-		color: _palette(accent1, bg);
-		text-decoration: none;
+a {
+  @include vendor(
+    "transition",
+    (
+      "color #{_duration(transition)} ease-in-out",
+      "border-color #{_duration(transition)} ease-in-out"
+    )
+  );
+  color: _palette(accent1, bg);
+  text-decoration: none;
 
-		&:hover {
-			border-bottom-color: transparent;
-			color: _palette(accent1, bg) !important;
-			text-decoration: none;
-		}
-	}
+  &:hover {
+    border-bottom-color: transparent;
+    color: _palette(accent1, bg) !important;
+    text-decoration: none;
+  }
+}
 
-	strong, b {
-		color: _palette(fg-bold);
-		font-weight: _font(weight-bold);
-	}
+strong,
+b {
+  color: _palette(fg-bold);
+  font-weight: _font(weight-bold);
+}
 
-	em, i {
-		font-style: italic;
-	}
+em,
+i {
+  font-style: italic;
+}
 
-	p {
-		margin: 0 0 _size(element-margin) 0;
-	}
+p {
+  margin: 0 0 _size(element-margin) 0;
+}
 
-	h1, h2, h3, h4, h5, h6 {
-		color: _palette(fg-bold);
-		font-weight: _font(weight-bold);
-		line-height: 1em;
-		margin: 0 0 (_size(element-margin) * 0.5) 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: _palette(fg-bold);
+  font-weight: _font(weight-bold);
+  line-height: 1em;
+  margin: 0 0 (_size(element-margin) * 0.5) 0;
 
-		a {
-			color: inherit;
-			text-decoration: none;
-		}
-	}
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
 
-	h1 {
-		font-size: 2em;
-		line-height: 1.5em;
-	}
+h1 {
+  font-size: 2em;
+  line-height: 1.5em;
+}
 
-	h2 {
-		font-size: 1.5em;
-		line-height: 1.5em;
-	}
+h2 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
 
-	h3 {
-		font-size: 1.25em;
-		line-height: 1.5em;
-	}
+h3 {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
 
-	h4 {
-		font-size: 1.1em;
-		line-height: 1.5em;
-	}
+h4 {
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
 
-	h5 {
-		font-size: 0.9em;
-		line-height: 1.5em;
-	}
+h5 {
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
 
-	h6 {
-		font-size: 0.7em;
-		line-height: 1.5em;
-	}
+h6 {
+  font-size: 0.7em;
+  line-height: 1.5em;
+}
 
-	sub {
-		font-size: 0.8em;
-		position: relative;
-		top: 0.5em;
-	}
+sub {
+  font-size: 0.8em;
+  position: relative;
+  top: 0.5em;
+}
 
-	sup {
-		font-size: 0.8em;
-		position: relative;
-		top: -0.5em;
-	}
+sup {
+  font-size: 0.8em;
+  position: relative;
+  top: -0.5em;
+}
 
-	hr {
-		border: 0;
-		border-bottom: solid 2px _palette(border);
+hr {
+  border: 0;
+  border-bottom: solid 2px _palette(border);
 
-		// This is the *only* instance where we need to rely on margin collapse.
-		margin: _size(element-margin) 0;
+  // This is the *only* instance where we need to rely on margin collapse.
+  margin: _size(element-margin) 0;
 
-		&.major {
-			margin: (_size(element-margin) * 1.5) 0;
-		}
-	}
+  &.major {
+    margin: (_size(element-margin) * 1.5) 0;
+  }
+}
 
-	blockquote {
-		border-left: solid 6px _palette(border);
-		font-style: italic;
-		margin: 0 0 _size(element-margin) 0;
-		padding: 0.5em 0 0.5em 1.5em;
-	}
+blockquote {
+  border-left: solid 6px _palette(border);
+  font-style: italic;
+  margin: 0 0 _size(element-margin) 0;
+  padding: 0.5em 0 0.5em 1.5em;
+}
 
-	code {
-		background: _palette(border-bg);
-		border-radius: _size(border-radius);
-		border: solid 2px _palette(border);
-		font-family: _font(family-fixed);
-		font-size: 0.9em;
-		margin: 0 0.25em;
-		padding: 0.25em 0.65em;
-	}
+code {
+  background: _palette(border-bg);
+  border-radius: _size(border-radius);
+  border: solid 2px _palette(border);
+  font-family: _font(family-fixed);
+  font-size: 0.9em;
+  margin: 0 0.25em;
+  padding: 0.25em 0.65em;
+}
 
-	pre {
-		-webkit-overflow-scrolling: touch;
-		font-family: _font(family-fixed);
-		font-size: 0.9em;
-		margin: 0 0 _size(element-margin) 0;
+pre {
+  -webkit-overflow-scrolling: touch;
+  font-family: _font(family-fixed);
+  font-size: 0.9em;
+  margin: 0 0 _size(element-margin) 0;
 
-		code {
-			display: block;
-			line-height: 1.75em;
-			padding: 1em 1.5em;
-			overflow-x: auto;
-		}
-	}
+  code {
+    display: block;
+    line-height: 1.75em;
+    padding: 1em 1.5em;
+    overflow-x: auto;
+  }
+}
 
-	.align-left {
-		text-align: left;
-	}
+.align-left {
+  text-align: left;
+}
 
-	.align-center {
-		text-align: center;
-	}
+.align-center {
+  text-align: center;
+}
 
-	.align-right {
-		text-align: right;
-	}
+.align-right {
+  text-align: right;
+}
 
 .main {
   margin-left: $size-header-width;
