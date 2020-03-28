@@ -4,9 +4,9 @@ module.exports = {
     title: `Ehabs Portfolio`,
     description: `Ehab's Portfolio desc`,
     author: `@Ehab Okal`,
-    twitter:`www.twitter.com`,
-    github: `www.github.com`,
-    email: `ihabokal@hotmail.com`
+    twitter:`https://www.twitter.com`,
+    github: `https://www.github.com`,
+    email: `mailto: ihabokal@hotmail.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

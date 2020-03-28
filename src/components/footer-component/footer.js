@@ -1,6 +1,6 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import footerStyles from "./footer.moduel.scss"
+import { useStaticQuery, graphql } from "gatsby"
+import footerStyles from "./footer.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Footer = () => {
@@ -21,16 +21,26 @@ const Footer = () => {
       <div className={footerStyles.inner}>
         <ul className={footerStyles.icons}>
           <li>
-            <a href={data.site.siteMetadata.twitter}>
-              <FontAwesomeIcon icon={["fab", "twitter"]} size="2x" />
-            </a>
-            <a href={data.site.siteMetadata.github}>
-              <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
-            </a>
-            <a href={data.site.siteMetadata.email}>
-              <FontAwesomeIcon icon={["fas", "at"]} size="2x" />
+            <a href={data.site.siteMetadata.twitter} className={footerStyles.icon}>
+              <FontAwesomeIcon icon={["fab", "twitter"]} size="1x" />
+              <span className={footerStyles.label}>Twitter</span>
             </a>
           </li>
+          <li>
+            <a href={data.site.siteMetadata.github} className={footerStyles.icon}>
+              <FontAwesomeIcon icon={["fab", "github"]} size="1x" />
+              <span className={footerStyles.label}>github</span>
+            </a>
+          </li>
+          <li>
+            <a href={data.site.siteMetadata.email} className={footerStyles.icon}>
+              <FontAwesomeIcon icon={["fas", "at"]} size="1x" />
+              <span className={footerStyles.label}>email</span>
+            </a>
+          </li>
+        </ul>
+        <ul className={footerStyles.copyright}>
+          <li>&copy; Stuff</li>
         </ul>
       </div>
     </footer>
