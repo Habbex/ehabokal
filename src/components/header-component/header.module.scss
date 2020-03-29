@@ -27,29 +27,28 @@ $size-header-pad: 4em;
 
   > .inner {
     @include vendor("flex-grow", "1");
-    margin: 0 0 ($size-header-pad * 0.5) 0;
-    z-index: 2;
+    margin: 0 0 ($size-header-pad * 1.5) 0;
+    z-index: 2;    
   }
+    strong,
+    b {
+      color: _palette(accent2, fg-bold);
+    }
 
-  strong,
-  b {
-    color: _palette(accent2, fg-bold);
-  }
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: _palette(accent2, fg-bold);
+    }
 
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: _palette(accent2, fg-bold);
-  }
-
-  h1 {
-    color: _palette(accent2, fg);
-    font-size: 1.35em;
-    line-height: 1.75em;
-    margin: 0;
-  }
+    h1 {
+      color: _palette(accent2, fg);
+      font-size: 1.35em;
+      line-height: 1.75em;
+      margin: 0;
+    }
 
   .image-avatar {
     margin: 0 0 (_size(element-margin) * 0.5) 0;

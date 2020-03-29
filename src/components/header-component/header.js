@@ -40,6 +40,7 @@ const Header = () => {
           top: 0,
           width: "100%",
           height: "100%",
+          opacity: 0.8,
         }}
         fluid={data.headerImg.childImageSharp.fluid}
       />

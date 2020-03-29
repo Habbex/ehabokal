@@ -39,8 +39,10 @@ const Footer = () => {
             </a>
           </li>
         </ul>
+        </div>
+        <div class={footerStyles.inner}>
         <ul className={footerStyles.copyright}>
-          <li>&copy; Stuff</li>
+          <li><span> &copy;  Stuff</span></li>
         </ul>
       </div>
     </footer>
