@@ -1,0 +1,57 @@
+@import "../libs/_vendor";
+@import "../libs/_vars";
+@import "../libs/_mixinis";
+@import "../libs/_functions";
+
+/* Work Item */
+.workItem {
+  margin: 0 0 _size(element-margin) 0;
+
+  .image {
+    margin: 0 0 (_size(element-margin) * 0.75) 0;
+  }
+
+  h3 {
+    font-size: 1em;
+    margin: 0 0 (_size(element-margin) * 0.25) 0;
+  }
+
+  p {
+    font-size: 0.8em;
+    line-height: 1.5em;
+    margin: 0;
+  }
+}
+
+.posts {
+  list-style-type: none;
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 30px;
+  padding: 10px;
+}
+
+.post {
+  margin: 1rem 0;
+  text-align: center;
+  a {
+    background: #f4f4f4;
+    color: #000000;
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+  }
+  a:hover {
+    background: #e4e4e4;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+  p {
+    color: #777777;
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+}

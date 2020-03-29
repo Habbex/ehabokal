@@ -40,7 +40,7 @@ const Footer = () => {
           </li>
         </ul>
         </div>
-        <div class={footerStyles.inner}>
+        <div className={footerStyles.inner}>
         <ul className={footerStyles.copyright}>
           <li><span> &copy;  Stuff</span></li>
         </ul>

@@ -74,7 +74,7 @@ $size-header-pad: 4em;
     }
     a {
       color: _palette(accent2, fg-bold);
-      font-size: 1.35em;
+      font-size: 1.20em;
       line-height: 1.75em;
       margin-right: 1.3rem;
       text-decoration: none;
@@ -85,7 +85,6 @@ $size-header-pad: 4em;
     }
 
     a::after {
-      content: "";
       display: block;
       width: 0;
       height: 2px;
@@ -98,7 +97,8 @@ $size-header-pad: 4em;
     }
 
     .active-nav-item {
-      color: _palette(accent2, fg);
+      color: _palette(accent2, fg-light);
+      content: "";
     }
 
     &.alt {
