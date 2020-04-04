@@ -11,7 +11,7 @@ const BlogPage = () => {
     query {
       sectionImg: file(relativePath: { eq: "images/sectionImages/01.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 2938, maxHeight: 3937) {
+          fluid(maxWidth: 300, maxHeight: 300) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -23,6 +23,13 @@ const BlogPage = () => {
             frontmatter {
               title
               date
+              featuredImage {
+                childImageSharp {
+                  fluid(maxWidth: 300, maxHeight: 300) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
             fields {
               slug
@@ -57,7 +64,8 @@ const BlogPage = () => {
                   to={`/blog/${edge.node.fields.slug}`}
                   key={edge.node.id}
                 >
-                  <Img fluid={data.sectionImg.childImageSharp.fluid} />
+                 {edge.node.frontmatter.featuredImage?
+                  <Img fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid}/>: <Img fluid={data.sectionImg.childImageSharp.fluid} /> }   
                 </Link>
                 <h3>{edge.node.frontmatter.title}</h3>
                 <p>{edge.node.frontmatter.date}</p>

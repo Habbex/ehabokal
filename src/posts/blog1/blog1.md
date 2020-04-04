@@ -1,6 +1,8 @@
 ---
 title: "Created from github"
 date: "2020-01-10"
+featuredImage:  ./04.jpg
+featuredImgAlt: "Gatsby Image Alt"
 ---
 
 ### What is Lorem Ipsum?

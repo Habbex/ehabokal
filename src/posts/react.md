@@ -1,6 +1,7 @@
 ---
 title: "React"
 date: "2019-12-01"
+featuredImage:  ../images/gatsby-icon.png
 ---
 
 test test something react. 
