@@ -23,6 +23,7 @@ const BlogPage = () => {
             frontmatter {
               title
               date
+              shortdescription
               featuredImage {
                 childImageSharp {
                   fluid(maxWidth: 300, maxHeight: 300) {
@@ -68,6 +69,7 @@ const BlogPage = () => {
                   <Img fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid}/>: <Img fluid={data.sectionImg.childImageSharp.fluid} /> }   
                 </Link>
                 <h3>{edge.node.frontmatter.title}</h3>
+                <p>{edge.node.frontmatter.shortdescription}</p>
                 <p>{edge.node.frontmatter.date}</p>
               </article>
             )

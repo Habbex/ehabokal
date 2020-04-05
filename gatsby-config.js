@@ -26,7 +26,14 @@ module.exports = {
         ],
       },
     },
-     `gatsby-plugin-sass`, 
+ {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+       cssLoaderOptions: {
+          camelCase: true,
+       },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

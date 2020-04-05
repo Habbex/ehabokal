@@ -26,20 +26,20 @@
 
 // Palette.
 	$palette: (
-		bg:					#fff,
+		bg:					#141d26,
 		fg:					#a2a2a2,
-		fg-bold:			#787878,
+		fg-bold:			#c1c1c1,
 		fg-light:			#b2b2b2,
-		border:				#efefef,
+		border:				#c1c1c1,
 		border-bg:			#f7f7f7,
 		border2:			#dfdfdf,
 		border2-bg:			#e7e7e7,
 
 		accent1: (
-			bg:				#3e68a0,
-			fg:				mix(#70abd3, #ffffff, 25%),
+			bg:				#c51f5d,
+			fg:				mix(#bb3566, #ffffff, 25%),
 			fg-bold:		#ffffff,
-			fg-light:		mix(#a1b6dd, #ffffff, 40%),
+			fg-light:		mix(#ca4a79, #ffffff, 40%),
 			border:			rgba(255,255,255,0.25),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(255,255,255,0.5),
