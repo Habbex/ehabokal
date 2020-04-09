@@ -11,6 +11,12 @@
     margin: 0 0 (_size(element-margin) * 0.75) 0;
   }
 
+  > * img {
+      border-radius: 10px;
+      border: 2px solid #c1c1c1;
+      overflow: hidden;
+        }
+
   h3 {
     font-size: 1em;
     margin: 0 0 (_size(element-margin) * 0.25) 0;
