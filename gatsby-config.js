@@ -19,7 +19,7 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 750,
+              maxWidth: 1200,
               linkImagesToOriginal: false,
             },
           },
@@ -30,7 +30,7 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
        cssLoaderOptions: {
-          camelCase: true,
+          camelCase: false,
        },
       },
     },

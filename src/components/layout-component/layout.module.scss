@@ -653,7 +653,13 @@ header {
       display: none;
     }
   }
-
+> *  section,
+  article {
+    width: 100%;
+    &.special {
+      text-align: center;
+    }
+  }
   /* List */
 
   ul {
@@ -695,6 +701,7 @@ header {
 
   section,
   article {
+    width: 100%;
     &.special {
       text-align: center;
     }
@@ -733,3 +740,5 @@ header {
     }
   }
 }
+
+

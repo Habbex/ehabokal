@@ -140,6 +140,7 @@ $size-header-pad: 4em;
   $size-header-pad: 3em;
 
   .footer {
+    width: $size-header-width;
     .copyright {
       li {
         border-left-width: 0;
@@ -204,7 +205,7 @@ $size-header-pad: 4em;
   $size-header-pad: 1.5em;
   /* Footer */
 
-  #footer {
+  .footer {
     .copyright {
       li {
         border-left-width: 0;

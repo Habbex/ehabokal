@@ -56,7 +56,7 @@ $size-header-pad: 4em;
     margin: 0 0 ($size-header-pad * 1.5) 0;
     z-index: 2;    
   }
-    strong,
+  strong,
     b {
       color: _palette(accent2, fg-bold);
     }
@@ -71,7 +71,7 @@ $size-header-pad: 4em;
 
     h1 {
       color: _palette(accent2, fg);
-      font-size: 1.35em;
+      font-size: 1.25em;
       line-height: 1.75em;
       margin: 0;
     }
@@ -89,20 +89,17 @@ $size-header-pad: 4em;
 
   /*Nav-List*/
 
-  ul {
+ > *  ul {
     list-style-type: none;
     margin: 0 0 _size(element-margin) 0;
     padding-left: unset;
     display: inline-flex;
 
-    li {
-      padding-left: 1.35em;
-    }
     a {
       color: _palette(accent2, fg-bold);
       font-size: 1.20em;
       line-height: 1.75em;
-      margin-right: 1.3rem;
+      margin-right: 1.0rem;
       text-decoration: none;
     }
 
@@ -164,7 +161,6 @@ $size-header-pad: 4em;
           display: none;
         }
       }
-
       > .inner {
         margin-bottom: 0;
       }
@@ -177,25 +173,21 @@ $size-header-pad: 4em;
 	@include breakpoint('<=medium') {
 
     $size-header-pad: 4em;
-    
     .header {
       background-attachment:	scroll;
-      background-position:	top left,	center center;
-      background-size:		auto,		cover;
       left: auto;
       padding: ($size-header-pad * 1.5) $size-header-pad;
       position: relative;
       text-align: center;
       top: auto;
       width: 100%;
-      display: block;
+      // display: block;
+    }
+    h1 {
+      font-size: 1.75em;
 
-      h1 {
-        font-size: 1.75em;
-
-        br {
-          display: inline;
-        }
+      br {
+        display: inline;
       }
     }
   }
@@ -205,13 +197,27 @@ $size-header-pad: 4em;
     $size-header-pad: 1.5em;
     /* Header */
 
-			#header {
+			.header {
 				padding: ($size-header-pad * 1.5) $size-header-pad;
 
 				h1 {
 					font-size: 1.35em;
 				}
       }
+
+      /* List */
+
+			ul {
+				&.labeled-icons {
+					li {
+						padding-left: 2em;
+
+						h3 {
+							line-height: 1.75em;
+						}
+					}
+				}
+			}
     }
 
     /* XSmall */
@@ -231,3 +237,11 @@ $size-header-pad: 4em;
 				}
       }
     }
+    
+  /* Touch */
+body.is-touch {
+  .header {
+    background-attachment:	scroll;
+    background-size:		auto, cover;
+  }
+}  

@@ -11,7 +11,7 @@ const BlogPage = () => {
     query {
       sectionImg: file(relativePath: { eq: "images/sectionImages/01.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300, maxHeight: 300) {
+          fluid{
             ...GatsbyImageSharpFluid
           }
         }
@@ -26,7 +26,7 @@ const BlogPage = () => {
               shortdescription
               featuredImage {
                 childImageSharp {
-                  fluid(maxWidth: 300, maxHeight: 300) {
+                  fluid{
                     ...GatsbyImageSharpFluid
                   }
                 }
@@ -58,7 +58,7 @@ const BlogPage = () => {
             {data.allMarkdownRemark.edges.map(edge => {
               return (
                 <article
-                  className={`${layoutStyles.col4} ${layoutStyles.xsmall} ${blogStyles.workItem}`}
+                  className={`${layoutStyles.col6} ${layoutStyles.xsmall} ${layoutStyles.xsmall} ${blogStyles.workItem}`}
                   key={edge.node.id}
                 >
                   <Link
@@ -74,7 +74,7 @@ const BlogPage = () => {
                         }
                       />
                     ) : (
-                      <Img fluid={data.sectionImg.childImageSharp.fluid} />
+                      <Img fluid={data.sectionImg.childImageSharp.fluid}  />
                     )}
                   </Link>
                   <h3>{edge.node.frontmatter.title}</h3>
