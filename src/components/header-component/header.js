@@ -1,6 +1,5 @@
 import React from "react"
 import headerStyles from "./header.module.scss"
-import Footer from "../footer-component/footer"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 const Header = () => {
@@ -8,6 +7,15 @@ const Header = () => {
     query {
       headerImg: file(
         relativePath: { eq: "images/header/headerBackgroundImage2.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2938, maxHeight: 3937) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      headerOverlayImg: file(
+        relativePath: { eq: "images/header/overlay.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 2938, maxHeight: 3937) {
@@ -40,7 +48,7 @@ const Header = () => {
           top: 0,
           width: "100%",
           height: "100%",
-          opacity: 0.8,
+          opacity: 0.6,
         }}
         fluid={data.headerImg.childImageSharp.fluid}
       />
@@ -83,7 +91,6 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <Footer />
     </header>
   )
 }

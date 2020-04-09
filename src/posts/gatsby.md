@@ -1,7 +1,7 @@
 ---
 title: "Test title"
 date: "2019-12-02"
-featuredImage:  ../images/sectionImages/laptop.jpg
+featuredImage: ../images/sectionImages/laptop.jpg
 ---
 
 Hej hej hej 
