@@ -22,19 +22,19 @@ const Footer = () => {
         <ul className={footerStyles.icons}>
           <li>
             <a href={data.site.siteMetadata.twitter} className={footerStyles.icon}>
-              <FontAwesomeIcon icon={["fab", "twitter"]} size="1x" />
+              <FontAwesomeIcon icon={["fab", "twitter"]} size="2x" />
               <span className={footerStyles.label}>Twitter</span>
             </a>
           </li>
           <li>
             <a href={data.site.siteMetadata.github} className={footerStyles.icon}>
-              <FontAwesomeIcon icon={["fab", "github"]} size="1x" />
+              <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
               <span className={footerStyles.label}>github</span>
             </a>
           </li>
           <li>
             <a href={data.site.siteMetadata.email} className={footerStyles.icon}>
-              <FontAwesomeIcon icon={["fas", "at"]} size="1x" />
+              <FontAwesomeIcon icon={["fas", "at"]} size="2x" />
               <span className={footerStyles.label}>email</span>
             </a>
           </li>

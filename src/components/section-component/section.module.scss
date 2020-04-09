@@ -1,6 +1,31 @@
 @import "../../libs/_functions";
 @import "../../libs/_vars";
+@import "../../libs/_breakpoints";
 
+@include breakpoints(
+  (
+    xlarge: (
+      1281px,
+      1800px,
+    ),
+    large: (
+      981px,
+      1280px,
+    ),
+    medium: (
+      737px,
+      980px,
+    ),
+    small: (
+      481px,
+      736px,
+    ),
+    xsmall: (
+      null,
+      480px,
+    ),
+  )
+);
 .sectionMain {
   section,
   article {
@@ -48,6 +73,16 @@
       h2 {
         font-size: 2em;
       }
+    }
+  }
+}
+
+@include breakpoint('<=small') {
+
+  $size-header-pad: 1.5em;
+  section, article {
+    &.special {
+      text-align: center;
     }
   }
 }

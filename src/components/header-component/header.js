@@ -83,7 +83,6 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <Footer />
     </header>
   )
 }
