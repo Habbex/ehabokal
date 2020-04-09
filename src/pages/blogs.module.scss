@@ -1,0 +1,35 @@
+@import "../libs/_vendor";
+@import "../libs/_vars";
+@import "../libs/_mixinis";
+@import "../libs/_functions";
+
+/* Work Item */
+.work-Item {
+  margin: 0 0 _size(element-margin) 0;
+
+  .image {
+    margin: 0 0 (_size(element-margin) * 0.75) 0;
+  }
+
+  > * img {
+      border-radius: 10px;
+      border: 2px solid #c1c1c1;
+      overflow: hidden;
+        }
+
+  h3 {
+    font-size: 1em;
+    margin: 0 0 (_size(element-margin) * 0.25) 0;
+  }
+
+  p {
+    font-size: 0.8em;
+    line-height: 1.5em;
+    margin: 0;
+  }
+}
+.linkStyle{
+    cursor: pointer; 
+    outline: 0px;
+}
+

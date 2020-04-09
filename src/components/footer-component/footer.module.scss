@@ -1,0 +1,102 @@
+@import "../../libs/_vendor";
+@import "../../libs/_vars";
+@import "../../libs/_mixinis";
+@import "../../libs/_functions";
+$size-header-width: 35%;
+$size-header-pad: 4em;
+
+.footer {
+  @include vendor("display", "flex");
+  @include vendor("flex-direction", "column");
+  @include vendor("align-items", "flex-end");
+  @include vendor("justify-content", "space-between");
+
+  > * {
+    @include vendor("flex-shrink", "0");
+    width: 100%;
+  }
+
+  > .inner {
+    @include vendor("flex-grow", "1");
+    margin: 0 0 ($size-header-pad * 0.5) 0;
+    z-index: 2;
+  }
+
+
+
+.icons {
+			margin: (_size(element-margin) * 0.5) 0 0 0;
+
+			a {
+				color: _palette(accent2, fg-light);
+			}
+		}
+
+		.copyright {
+			color: _palette(accent2, fg-light);
+			font-size: 0.8em;
+			list-style: none;
+			margin: (_size(element-margin) * 0.5) 0 0 0;
+			padding: 0;
+
+			li {
+				border-left: solid 1px _palette(accent2, border);
+				display: inline-block;
+				line-height: 1em;
+				margin-left: 0.75em;
+				padding-left: 0.75em;
+
+				&:first-child {
+					border-left: 0;
+					margin-left: 0;
+					padding-left: 0;
+				}
+
+				a {
+					color: inherit;
+				}
+			}
+		}
+  .icon {
+    border-bottom: none;
+    position: relative;
+    
+    > .label {
+      display: none;
+    }
+
+    &:before {
+      line-height: inherit;
+    }
+
+    &.solid {
+      &:before {
+        font-weight: 900;
+      }
+    }
+  }
+
+  ul.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      padding: 0 1em 0 0;
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      .icon {
+        &:before {
+          font-size: 1.5em;
+        }
+      }
+      a{
+         text-decoration: none;
+      }
+    }
+  }
+}

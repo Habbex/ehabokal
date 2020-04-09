@@ -22,13 +22,14 @@ const Blog = props => {
       <SEO title={props.data.markdownRemark.frontmatter.title} />
       <Section>
         <section>
-          <header class={SectionStyles.major}>
+          <header className={SectionStyles.major}>
             <h2>{props.data.markdownRemark.frontmatter.title}</h2>
           </header>
           <p>{props.data.markdownRemark.frontmatter.date}</p>
-          <div
+          <div className={SectionStyles.htmlsection}
             dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-          ></div>
+          > 
+          </div>
         </section>
       </Section>
     </Layout>
