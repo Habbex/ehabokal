@@ -58,7 +58,7 @@ const BlogPage = () => {
             {data.allMarkdownRemark.edges.map(edge => {
               return (
                 <article
-                  className={` ${layoutStyles.xsmall} ${blogStyles.workItem}`}
+                  className={ `${layoutStyles.col6} layout-module--col-12-xsmall--2pZfw  ${blogStyles.workItem}`}
                   key={edge.node.id}
                 >
                   <Link
