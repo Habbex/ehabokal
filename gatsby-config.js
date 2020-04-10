@@ -30,7 +30,7 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
        cssLoaderOptions: {
-          camelCase: false,
+          camelCase: true,
        },
       },
     },
