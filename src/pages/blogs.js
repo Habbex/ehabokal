@@ -58,7 +58,7 @@ const BlogPage = () => {
             {data.allMarkdownRemark.edges.map(edge => {
               return (
                 <article
-                  className={`${layoutStyles.xsmall} ${layoutStyles.xsmall} ${blogStyles.workItem}`}
+                  className={` ${layoutStyles.xsmall} ${blogStyles.workItem}`}
                   key={edge.node.id}
                 >
                   <Link
