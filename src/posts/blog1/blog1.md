@@ -1,7 +1,7 @@
 ---
 title: "Created from github"
 date: "2020-01-10"
-featuredImage:  "/sectionImages/robot.jpg"
+featuredImage:  /sectionImages/robot.jpg
 featuredImgAlt: "Gatsby Image Alt"
 shortdescription: "Short description for the blog post"
 ---
